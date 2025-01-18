@@ -1,0 +1,1 @@
+## Projeto para configuração do QTitle Window Manager
