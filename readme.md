@@ -1,1 +1,1 @@
-## Projeto para configuração do QTitle Window Manager
+## Projeto para configuração do QTile Window Manager
