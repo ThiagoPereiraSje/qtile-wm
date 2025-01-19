@@ -5,3 +5,7 @@ install:
 	sudo apt install -y pipx python3-xcffib python3-cairocffi
 	pipx install qtile
 	pipx ensurepath
+
+configure:
+	cp -f x11/xinitrc ~/.xinitrc
+	chmod +x ~/.xinitrc
