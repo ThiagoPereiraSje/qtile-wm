@@ -24,6 +24,7 @@ configure:
 	cp -f qtile/config.py ~/.config/qtile/config.py
 	cp -f fonts/*.ttf ~/.local/share/fonts/
 	cp -f fonts/*.otf ~/.local/share/fonts/
+	cp -rf backgrounds ~/.config/
 
 	echo '[ "tty" = "/dev/tty1" ] && exec startx' >> ~/.profile
 
