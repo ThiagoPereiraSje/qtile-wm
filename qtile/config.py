@@ -3,7 +3,7 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
 mod = "mod4"
-terminal = "mate-terminal"
+terminal = "lxterminal"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
