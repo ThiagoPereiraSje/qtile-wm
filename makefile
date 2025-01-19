@@ -16,10 +16,9 @@ configure:
 	cp -f x11/xinitrc ~/.xinitrc
 	chmod +x ~/.xinitrc
 
-	sudo mkdir -p /usr/share/xsessions
 	mkdir -p ~/.config/qtile
-
-	sudo cp -f qtile/qtile.desktop /usr/share/xsessions
 	cp -f qtile/config.py ~/.config/qtile/config.py
+
+	echo '[ "$(tty)" = "/dev/tty1" ] && exec startx' >> ~/.profile
 
 	reboot
