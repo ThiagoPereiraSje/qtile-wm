@@ -3,7 +3,7 @@ all: install_deps install_qtile configure
 install_deps:
 	sudo apt update
 	sudo apt install -y xserver-xorg xinit libpangocairo-1.0-0
-	sudo apt install -y xterm bash-completion
+	sudo apt install -y xterm bash-completion neovim
 
 
 install_qtile:
@@ -16,8 +16,8 @@ configure:
 	cp -f x11/xinitrc ~/.xinitrc
 	chmod +x ~/.xinitrc
 
-	echo 'if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then' > ~/.bashrc
-	echo '    startx' >> ~/.bashrc
-	echo 'fi' >> ~/.bashrc
+	echo "if [[ -z \$DISPLAY ]] && [[ \$(tty) = /dev/tty1 ]]; then" > ~/.bashrc
+	echo "    startx" >> ~/.bashrc
+	echo "fi" >> ~/.bashrc
 
 	reboot
