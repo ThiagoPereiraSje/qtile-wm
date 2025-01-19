@@ -19,6 +19,6 @@ configure:
 	mkdir -p ~/.config/qtile
 	cp -f qtile/config.py ~/.config/qtile/config.py
 
-	echo '[ "$(tty)" = "/dev/tty1" ] && exec startx' >> ~/.profile
+	echo '[ "tty" = "/dev/tty1" ] && exec startx' >> ~/.profile
 
 	reboot
