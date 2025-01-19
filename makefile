@@ -16,4 +16,7 @@ configure:
 	cp -f x11/xinitrc ~/.xinitrc
 	chmod +x ~/.xinitrc
 
+	mkdir -p ~/.config/qtile
+	cp -f qtile/config.py ~/.config/qtile/config.py
+
 	reboot
