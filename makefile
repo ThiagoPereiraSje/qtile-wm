@@ -16,8 +16,4 @@ configure:
 	cp -f x11/xinitrc ~/.xinitrc
 	chmod +x ~/.xinitrc
 
-	echo "if [[ -z \$DISPLAY ]] && [[ \$(tty) = /dev/tty1 ]]; then" > ~/.bashrc
-	echo "    startx" >> ~/.bashrc
-	echo "fi" >> ~/.bashrc
-
 	reboot
