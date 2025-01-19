@@ -3,7 +3,7 @@ all: install_deps install_qtile configure
 install_deps:
 	sudo apt update
 	sudo apt install -y xserver-xorg xinit libpangocairo-1.0-0
-	sudo apt install -y xterm bash-completion neovim
+	sudo apt install -y lxterminal bash-completion neovim lxrandr
 
 
 install_qtile:
