@@ -26,6 +26,6 @@ configure:
 	cp -f fonts/*.otf ~/.local/share/fonts/
 	cp -rf backgrounds ~/.config/
 
-	echo '[ "tty" = "/dev/tty1" ] && exec startx' >> ~/.profile
+	echo '[ "(tty)" = "/dev/tty1" ] && exec startx' >> ~/.profile
 
 	reboot
