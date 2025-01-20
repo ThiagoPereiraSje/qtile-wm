@@ -81,7 +81,7 @@ keys = [
   Key([_mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
   # Modify layout or window style
-  Key([_mod], "m", lazy.layout.maximize(), desc="Toggle between min and max sizes"),
+  Key([_mod], "m", lazy.next_layout(), desc="Toggle between layouts"),
 
   # Hide/Show tool bar
   Key([_mod], "b", lazy.hide_show_bar(position='all'), desc="Toggles the bar to show/hide"),
@@ -94,16 +94,17 @@ groups = [Group(i) for i in "1234"]
 for i in groups:
   keys.extend(
     # Switch to group
-    Key([_mod], i.name, lazy.group[i.name].toscreen(), desc=f"Switch to group {i.name}"),
+    Key([_mod], i.name, lazy.group[i.name].toscreen(), desc=f"Switch to group {i.name}",),
 
     # Switch and move focused windows to group
-    Key([_mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True), desc=f"Switch to & move focused window to group {i.name}"),
+    Key([_mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True), desc=f"Switch to & move focused window to group {i.name}",),
   )
 
 
 # Layouts Settings
 layouts = [
-  layout.Columns(border_width=1)
+  layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2),
+  layout.Max(),
 ]
 
 
