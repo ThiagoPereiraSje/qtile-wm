@@ -27,5 +27,3 @@ configure:
 	cp -rf backgrounds ~/.config/
 
 	echo '[ "(tty)" = "/dev/tty1" ] && exec startx' >> ~/.profile
-
-	reboot
