@@ -12,6 +12,7 @@ install_qtile:
 	sudo apt install -y pipx python3-xcffib python3-cairocffi
 	pipx install qtile
 	pipx ensurepath
+	echo '[ "(tty)" = "/dev/tty1" ] && exec startx' >> ~/.profile
 
 
 configure:
@@ -25,5 +26,3 @@ configure:
 	cp -f fonts/*.ttf ~/.local/share/fonts/
 	cp -f fonts/*.otf ~/.local/share/fonts/
 	cp -rf backgrounds ~/.config/
-
-	echo '[ "(tty)" = "/dev/tty1" ] && exec startx' >> ~/.profile
