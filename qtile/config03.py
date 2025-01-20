@@ -164,10 +164,3 @@ screens = [
         # x11_drag_polling_rate = 60,
     ),
 ]
-
-# Drag floating layouts.
-mouse = [
-    Drag([_mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag([_mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
-    Click([_mod], "Button2", lazy.window.bring_to_front()),
-]
