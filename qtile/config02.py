@@ -3,7 +3,7 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
 
-# QTile - Configurações padrão
+# QTile - Default Settings
 wmname                     = "LG3D"
 auto_fullscreen            = True
 auto_minimize              = True
@@ -36,3 +36,49 @@ floating_layout = layout.Floating(
     Match(title="pinentry"),  # GPG key password entry
   ]
 )
+
+
+# My Settings
+_mod      = "mod4"
+_terminal = "lxterminal"
+
+
+# Lazy Functions
+
+
+# Key Maps
+keys = [
+  # Utilities
+  Key([_mod], "Return", lazy.spawn(_terminal), desc="Launch terminal"),
+  Key([_mod], "w",      lazy.window.kill(),    desc="Kill focused window"),
+  Key([_mod], "r",      lazy.spawncmd(),       desc="Spawn a command using a prompt widget"),
+
+  Key([_mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
+  Key([_mod, "control"], "q", lazy.shutdown(),      desc="Shutdown Qtile"),
+
+  # Switch between windows
+  Key([_mod], "Left",  lazy.layout.left(),  desc="Move focus to left"),
+  Key([_mod], "Right", lazy.layout.right(), desc="Move focus to right"),
+  Key([_mod], "Down",  lazy.layout.down(),  desc="Move focus down"),
+  Key([_mod], "Up",    lazy.layout.up(),    desc="Move focus up"),
+  Key([_mod], "space", lazy.layout.next(),  desc="Move window focus to other window"),
+
+  # Move windows between left/right up/down
+  Key([_mod, "shift"], "Left",  lazy.layout.shuffle_left(),  desc="Move window to the left"),
+  Key([_mod, "shift"], "Right", lazy.layout.shuffle_right(), desc="Move window to the right"),
+  Key([_mod, "shift"], "Down",  lazy.layout.shuffle_down(),  desc="Move window down"),
+  Key([_mod, "shift"], "Up",    lazy.layout.shuffle_up(),    desc="Move window up"),
+
+  # Grow windows
+  Key([_mod, "control"], "Left",  lazy.layout.grow_left(),  desc="Grow window to the left"),
+  Key([_mod, "control"], "Right", lazy.layout.grow_right(), desc="Grow window to the right"),
+  Key([_mod, "control"], "Down",  lazy.layout.grow_down(),  desc="Grow window down"),
+  Key([_mod, "control"], "Up",    lazy.layout.grow_up(),    desc="Grow window up"),
+
+  # Normalize windows
+  Key([_mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+
+  # Modify layout or window style
+  Key([_mod], "Tab", lazy.next_layout(),            desc="Toggle between layouts"),
+  Key([_mod], "t",   lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
+]
