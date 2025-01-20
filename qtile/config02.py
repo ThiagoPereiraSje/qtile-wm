@@ -103,7 +103,7 @@ for i in groups:
 
 # Layouts Settings
 layouts = [
-  layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2),
+  layout.Columns(border_width=2),
   layout.Max(),
 ]
 
