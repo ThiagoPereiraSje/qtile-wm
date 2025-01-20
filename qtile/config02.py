@@ -81,8 +81,14 @@ keys = [
   Key([_mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
   # Modify layout or window style
-  Key([_mod], "m", lazy.next_layout(), desc="Toggle between layouts"),
+  Key([_mod], "m", lazy.layout.maximize(), desc="Toggle between min and max sizes"),
 
   # Hide/Show tool bar
   Key([_mod], "b", lazy.hide_show_bar(position='all'), desc="Toggles the bar to show/hide"),
+]
+
+
+# Layouts Settings
+layouts = [
+  layout.Columns(border_width=1)
 ]
