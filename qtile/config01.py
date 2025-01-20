@@ -110,10 +110,11 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
+    font="Ubuntu Bold",
     fontsize=12,
-    padding=3,
+    padding=0,
 )
+
 extension_defaults = widget_defaults.copy()
 
 screens = [
