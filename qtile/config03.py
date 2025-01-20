@@ -43,6 +43,10 @@ _mod      = "mod4"
 _terminal = "lxterminal"
 _app_launcher = "rofi -show drun -show-icons"
 
+
+# Lazy Functions
+
+
 # Key Maps
 keys = [
   # Utilities
@@ -84,6 +88,7 @@ keys = [
 ]
 
 
+# Group Settings
 groups = [Group(i) for i in "1234"]
 
 for i in groups:
