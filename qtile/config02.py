@@ -39,8 +39,9 @@ floating_layout = layout.Floating(
 
 
 # My Settings
-_mod      = "mod4"
-_terminal = "lxterminal"
+_mod          = "mod4"
+_terminal     = "lxterminal"
+_app_launcher = "rofi -show drun -show-icons"
 
 
 # Lazy Functions
@@ -49,9 +50,10 @@ _terminal = "lxterminal"
 # Key Maps
 keys = [
   # Utilities
-  Key([_mod], "Return", lazy.spawn(_terminal), desc="Launch terminal"),
-  Key([_mod], "w",      lazy.window.kill(),    desc="Kill focused window"),
-  Key([_mod], "r",      lazy.spawncmd(),       desc="Spawn a command using a prompt widget"),
+  Key([_mod], "Return", lazy.spawn(_terminal),     desc="Launch terminal"),
+  Key([_mod], "w",      lazy.window.kill(),        desc="Kill focused window"),
+  Key([_mod], "r",      lazy.spawncmd(),           desc="Spawn a command using a prompt widget"),
+  Key([_mod], "d",      lazy.spawn(_app_launcher), desc="Launch Apps"),
 
   Key([_mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
   Key([_mod, "control"], "q", lazy.shutdown(),      desc="Shutdown Qtile"),
@@ -79,6 +81,8 @@ keys = [
   Key([_mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
   # Modify layout or window style
-  Key([_mod], "Tab", lazy.next_layout(),            desc="Toggle between layouts"),
-  Key([_mod], "t",   lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
+  Key([_mod], "m", lazy.next_layout(), desc="Toggle between layouts"),
+
+  # Hide/Show tool bar
+  Key([_mod], "b", lazy.hide_show_bar(position='all'), desc="Toggles the bar to show/hide"),
 ]
