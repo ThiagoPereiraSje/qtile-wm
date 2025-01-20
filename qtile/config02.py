@@ -92,13 +92,13 @@ keys = [
 groups = [Group(i) for i in "1234"]
 
 for i in groups:
-  keys.extend(
+  keys.extend([
     # Switch to group
-    Key([_mod], i.name, lazy.group[i.name].toscreen(), desc=f"Switch to group {i.name}",),
+    Key([_mod], i.name, lazy.group[i.name].toscreen(), desc=f"Switch to group {i.name}"),
 
     # Switch and move focused windows to group
-    Key([_mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True), desc=f"Switch to & move focused window to group {i.name}",),
-  )
+    Key([_mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True), desc=f"Switch to & move focused window to group {i.name}"),
+  ])
 
 
 # Layouts Settings
