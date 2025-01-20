@@ -1,5 +1,5 @@
-from libqtile import bar, layout, qtile, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile import bar, layout, widget
+from libqtile.config import Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
 
@@ -104,4 +104,15 @@ for i in groups:
 # Layouts Settings
 layouts = [
   layout.Columns(border_width=1)
+]
+
+
+# Screen Settings
+screens = [
+  Screen(
+    top=bar.Bar([
+      widget.GroupBox(),
+      widget.WindowName(),
+    ], 20)
+  ),
 ]
