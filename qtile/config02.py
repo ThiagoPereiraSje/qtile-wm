@@ -1,6 +1,15 @@
-from libqtile import bar, layout, widget
+import os
+import subprocess
+
+from libqtile import bar, layout, widget, hook
 from libqtile.config import Group, Key, Match, Screen
 from libqtile.lazy import lazy
+
+
+@hook.subscribe.startup_once
+def autostart():
+  home = os.path.expanduser('~/.config/qtile/autostart.sh')
+  subprocess.call(home)
 
 
 # QTile - Default Settings
