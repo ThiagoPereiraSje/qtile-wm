@@ -21,7 +21,7 @@ configure:
 	mkdir -p ~/.config/qtile
 	mkdir -p ~/.local/share/fonts
 
-	cp -f qtile/config.py ~/.config/qtile/config.py
+	cp -f qtile/config01.py ~/.config/qtile/config.py
 	cp -f fonts/*.ttf ~/.local/share/fonts/
 	cp -f fonts/*.otf ~/.local/share/fonts/
 	cp -rf backgrounds ~/.config/
