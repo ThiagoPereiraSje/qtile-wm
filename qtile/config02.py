@@ -146,20 +146,20 @@ screens = [
     top=bar.Bar([
       widget.GroupBox(
         fontsize = 11,
-        margin_y = 5,
-        margin_x = 5,
-        padding_y = 0,
-        padding_x = 1,
-        borderwidth = 3,
+        # margin_y = 5,
+        # margin_x = 5,
+        # padding_y = 0,
+        # padding_x = 1,
+        borderwidth = 2,
         active = _colors[8],
         inactive = _colors[1],
         rounded = False,
-        highlight_color = _colors[2],
-        highlight_method = "line",
-        this_current_screen_border = _colors[7],
-        this_screen_border = _colors [4],
-        other_current_screen_border = _colors[7],
-        other_screen_border = _colors[4],
+        # highlight_color = _colors[2],
+        # highlight_method = "line",
+        # this_current_screen_border = _colors[7],
+        # this_screen_border = _colors [4],
+        # other_current_screen_border = _colors[7],
+        # other_screen_border = _colors[4],
       ),
       _separator,
       widget.WindowName(
@@ -171,7 +171,7 @@ screens = [
         fontsize=14,
         foreground = _colors[1]
       ),
-      widget.Spacer(length = 8),
+      widget.Spacer(length = 50),
       widget.CPU(
         format = 'Cpu: {load_percent}%',
         foreground = _colors[4],
@@ -184,7 +184,7 @@ screens = [
       ),
       _separator,
       widget.Memory(
-        foreground = _colors[0],
+        foreground = _colors[1],
         format = '{SwapUsed: .0f}{mm}',
         fmt = 'Swap: {}',
       ),
@@ -198,6 +198,25 @@ screens = [
         fmt = 'Disk: {}',
         visible_on_warn = False,
       ),
+      _separator,
+      widget.Volume(
+        foreground = _colors[7],
+        fmt = 'Vol: {}',
+      ),
+      _separator,
+      widget.KeyboardLayout(
+        foreground = _colors[4],
+        fmt = '⌨  KB: {}',
+      ),
+      _separator,
+      widget.Clock(
+        foreground = _colors[8],
+        format = "%H:%M",
+      ),
+      _separator,
+      widget.Wallpaper(directory="~/.config/backgrounds/"),
+      _separator,
+      widget.Systray(padding = 2),
     ], 20)
   ),
 ]
