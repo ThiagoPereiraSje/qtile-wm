@@ -172,16 +172,11 @@ screens = [
         foreground = _colors[6],
         max_chars = 40
       ),
-      widget.Spacer(length = 8),
-      widget.CPU(
-        format = '▓ Cpu: {load_percent}%',
-        foreground = _colors[4],
-        decorations=[
-          BorderDecoration(
-            colour = _colors[4],
-            border_width = [0, 0, 2, 0],
-          )
-        ],
+      #widget.Spacer(length = 8),
+      widget.CPUGraph(core=0, width=21, line_width=2,
+        graph_color='#0066FF',
+        fill_color=['#0066FF', '#001111'],
+        margin_x=0, border_width=1,
       ),
     ], 20)
   ),
