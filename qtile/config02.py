@@ -2,7 +2,7 @@ import os
 import subprocess
 import colors
 
-from libqtile import bar, layout, widget, hook
+from libqtile import bar, layout, widget, hook, qtile
 from libqtile.config import Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
@@ -165,6 +165,22 @@ screens = [
         other_screen_border = _colors[4],
       ),
       _separator,
+      widget.WindowName(
+        foreground = _colors[6],
+        max_chars = 40
+      ),
+      widget.Spacer(length = 8),
+      widget.CPU(
+        format = '▓ Cpu: {load_percent}%',
+        foreground = _colors[4],
+      ),
+      widget.Spacer(length = 8),
+      widget.Memory(
+        foreground = _colors[8],
+        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(_terminal + ' -e htop')},
+        format = '{MemUsed: .0f}{mm}',
+        fmt = '🖥  Mem: {} used',
+      ),
     ], 20)
   ),
 ]
