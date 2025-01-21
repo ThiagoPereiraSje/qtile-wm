@@ -146,6 +146,7 @@ screens = [
     top=bar.Bar([
       widget.GroupBox(
         fontsize = 11,
+        fmt = "WS: {}",
         # margin_y = 5,
         # margin_x = 5,
         # padding_y = 0,
@@ -154,8 +155,8 @@ screens = [
         active = _colors[8],
         inactive = _colors[1],
         rounded = False,
+        highlight_method = "block",
         # highlight_color = _colors[2],
-        # highlight_method = "line",
         # this_current_screen_border = _colors[7],
         # this_screen_border = _colors [4],
         # other_current_screen_border = _colors[7],
