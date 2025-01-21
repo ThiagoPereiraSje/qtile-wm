@@ -1,5 +1,6 @@
 import os
 import subprocess
+import colors
 
 from libqtile import bar, layout, widget, hook
 from libqtile.config import Group, Key, Match, Screen
@@ -10,6 +11,10 @@ from libqtile.lazy import lazy
 def autostart():
   home = os.path.expanduser('~/.config/qtile/autostart.sh')
   subprocess.call(home)
+
+
+# Theme Colors
+_colors = colors.DoomOne
 
 
 # QTile - Default Settings
@@ -29,6 +34,7 @@ widget_defaults = dict(
   font="Ubuntu Bold",
   fontsize=12,
   padding=0,
+  background=_colors[0]
 )
 
 extension_defaults = widget_defaults.copy()
@@ -111,18 +117,54 @@ for i in groups:
 
 
 # Layouts Settings
+_layout_theme = {
+  "border_width": 2,
+  "margin": 0,
+  "border_focus": _colors[8],
+  "border_normal": _colors[0]
+}
+
 layouts = [
-  layout.Columns(border_width=2),
-  layout.Max(),
+  layout.Columns(**_layout_theme),
+  layout.Max(border_width=0, margin=0),
 ]
 
 
 # Screen Settings
+_separator = widget.TextBox(
+  text = '|',
+  font = "Ubuntu Mono",
+  foreground = _colors[1],
+  padding = 2,
+  fontsize = 14
+)
+
 screens = [
   Screen(
     top=bar.Bar([
-      widget.GroupBox(),
-      widget.WindowName(),
+      widget.Prompt(
+        font = "Ubuntu Mono",
+        fontsize=14,
+        foreground = _colors[1]
+      ),
+      widget.GroupBox(
+        fontsize = 11,
+        margin_y = 5,
+        margin_x = 5,
+        padding_y = 0,
+        padding_x = 1,
+        borderwidth = 3,
+        active = _colors[8],
+        inactive = _colors[1],
+        rounded = False,
+        highlight_color = _colors[2],
+        highlight_method = "line",
+        this_current_screen_border = _colors[7],
+        this_screen_border = _colors [4],
+        other_current_screen_border = _colors[7],
+        other_screen_border = _colors[4],
+      ),
+      _separator,
     ], 20)
   ),
 ]

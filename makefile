@@ -23,6 +23,7 @@ configure:
 	mkdir -p ~/.local/share/fonts
 
 	cp -f qtile/config02.py ~/.config/qtile/config.py
+	cp -f qtile/colors.py ~/.config/qtile/colors.py
 	cp -f qtile/autostart.sh ~/.config/qtile/autostart.sh
 
 	chmod +x ~/.config/qtile/autostart.sh
