@@ -59,6 +59,7 @@ floating_layout = layout.Floating(
 _mod          = "mod4"
 _terminal     = "lxterminal"
 _app_launcher = "rofi -show drun -show-icons"
+_file_manager = "pcmanfm"
 
 
 # Lazy Functions
@@ -71,6 +72,7 @@ keys = [
   Key([_mod], "w",      lazy.window.kill(),        desc="Kill focused window"),
   Key([_mod], "r",      lazy.spawncmd(),           desc="Spawn a command using a prompt widget"),
   Key([_mod], "d",      lazy.spawn(_app_launcher), desc="Launch Apps"),
+  Key([_mod], "f",      lazy.spawn(_file_manager), desc="Launch File Manager"),
 
   Key([_mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
   Key([_mod, "control"], "q", lazy.shutdown(),      desc="Shutdown Qtile"),
@@ -122,7 +124,7 @@ for i in groups:
 _layout_theme = {
   "border_width": 2,
   "margin": 0,
-  "border_focus": _colors[8],
+  "border_focus": ["#444444", "#444444"],
   "border_normal": _colors[0]
 }
 
@@ -135,10 +137,8 @@ layouts = [
 # Screen Settings
 _separator = widget.TextBox(
   text = '|',
-  font = "Ubuntu Mono",
   foreground = _colors[1],
-  padding = 2,
-  fontsize = 14
+  padding = 6,
 )
 
 screens = [
@@ -146,26 +146,17 @@ screens = [
     top=bar.Bar([
       widget.TextBox(
         text = 'WS:',
-        foreground = _colors[8],
+        foreground = _colors[4],
         padding = 2,
-        fontsize = 14
       ),
       widget.GroupBox(
-        fontsize = 11,
-        # margin_y = 5,
-        # margin_x = 5,
-        # padding_y = 0,
-        # padding_x = 1,
-        borderwidth = 0,
+        margin = 0,
+        margin_y = 3,
+        borderwidth = 2,
         active = _colors[8],
         inactive = _colors[1],
         rounded = False,
         highlight_method = "block",
-        # highlight_color = _colors[2],
-        # this_current_screen_border = _colors[7],
-        # this_screen_border = _colors [4],
-        # other_current_screen_border = _colors[7],
-        # other_screen_border = _colors[4],
       ),
       _separator,
       widget.WindowName(
