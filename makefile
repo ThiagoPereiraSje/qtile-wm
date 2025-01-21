@@ -13,6 +13,7 @@ install_qtile:
 	pipx install qtile
 	pipx ensurepath
 	pipx inject qtile qtile-extras
+	pipx inject qtile psutil
 	echo '[ "(tty)" = "/dev/tty1" ] && exec startx' >> ~/.profile
 
 
