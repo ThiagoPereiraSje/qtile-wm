@@ -171,7 +171,7 @@ screens = [
       ),
       widget.Spacer(length = 8),
       widget.CPU(
-        format = '▓ Cpu: {load_percent}%',
+        format = 'Cpu: {load_percent}%',
         foreground = _colors[4],
       ),
       widget.Spacer(length = 8),
@@ -179,7 +179,7 @@ screens = [
         foreground = _colors[8],
         mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(_terminal + ' -e htop')},
         format = '{MemUsed: .0f}{mm}',
-        fmt = '🖥  Mem: {} used',
+        fmt = 'Mem: {} used',
       ),
     ], 20)
   ),
