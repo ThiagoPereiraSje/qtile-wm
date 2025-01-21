@@ -145,11 +145,6 @@ _separator = widget.TextBox(
 screens = [
   Screen(
     top=bar.Bar([
-      widget.Prompt(
-        font = "Ubuntu Mono",
-        fontsize=14,
-        foreground = _colors[1]
-      ),
       widget.GroupBox(
         fontsize = 11,
         margin_y = 5,
@@ -172,13 +167,31 @@ screens = [
         foreground = _colors[6],
         max_chars = 40
       ),
+      widget.Prompt(
+        font = "Ubuntu Mono",
+        fontsize=14,
+        foreground = _colors[1]
+      ),
       widget.Spacer(length = 8),
       widget.CPU(
-        format = 'Cpu: {load_percent}%',
+        format = '▓ Cpu: {load_percent}%',
         foreground = _colors[4],
         decorations=[
           BorderDecoration(
             colour = _colors[4],
+            border_width = [0, 0, 2, 0],
+          )
+        ],
+      ),
+      widget.Spacer(length = 8),
+      widget.Memory(
+        foreground = _colors[8],
+        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(_terminal + ' -e htop')},
+        format = '{MemUsed: .0f}{mm}',
+        fmt = '🖥 Mem: {} used',
+        decorations=[
+          BorderDecoration(
+            colour = _colors[8],
             border_width = [0, 0, 2, 0],
           )
         ],
