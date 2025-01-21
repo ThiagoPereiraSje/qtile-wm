@@ -206,7 +206,8 @@ screens = [
       _separator,
       widget.KeyboardLayout(
         foreground = _colors[4],
-        fmt = '⌨  KB: {}',
+        configured_keyboards = ['br', 'us'],
+        fmt = '⌨ KB: {}',
       ),
       _separator,
       widget.Clock(
@@ -214,8 +215,10 @@ screens = [
         format = "%H:%M",
       ),
       _separator,
-      widget.Wallpaper(directory="~/.config/backgrounds/"),
-      _separator,
+      widget.Wallpaper(
+        directory="~/.config/backgrounds/",
+        foreground = _colors[2]
+      ),
       widget.Systray(padding = 2),
     ], 20)
   ),
