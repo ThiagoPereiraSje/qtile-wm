@@ -2,12 +2,11 @@ import os
 import subprocess
 import colors
 
-from libqtile import bar, layout, widget, hook, qtile
+from libqtile import bar, layout, widget, hook
 from libqtile.config import Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
 from qtile_extras import widget
-from qtile_extras.widget.decorations import BorderDecoration
 
 
 @hook.subscribe.startup_once
@@ -174,27 +173,30 @@ screens = [
       ),
       widget.Spacer(length = 8),
       widget.CPU(
-        format = '▓ Cpu: {load_percent}%',
+        format = 'Cpu: {load_percent}%',
         foreground = _colors[4],
-        decorations=[
-          BorderDecoration(
-            colour = _colors[4],
-            border_width = [0, 0, 2, 0],
-          )
-        ],
       ),
-      widget.Spacer(length = 8),
+      _separator,
       widget.Memory(
         foreground = _colors[8],
-        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(_terminal + ' -e htop')},
         format = '{MemUsed: .0f}{mm}',
-        fmt = '🖥 Mem: {} used',
-        decorations=[
-          BorderDecoration(
-            colour = _colors[8],
-            border_width = [0, 0, 2, 0],
-          )
-        ],
+        fmt = 'Ram: {}',
+      ),
+      _separator,
+      widget.Memory(
+        foreground = _colors[0],
+        format = '{SwapUsed: .0f}{mm}',
+        fmt = 'Swap: {}',
+      ),
+      _separator,
+      widget.DF(
+        update_interval = 60,
+        foreground = _colors[5],
+        partition = '/',
+        #format = '[{p}] {uf}{m} ({r:.0f}%)',
+        format = '{uf}{m} free',
+        fmt = 'Disk: {}',
+        visible_on_warn = False,
       ),
     ], 20)
   ),
