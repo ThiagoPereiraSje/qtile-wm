@@ -170,17 +170,11 @@ screens = [
         max_chars = 40
       ),
       widget.Spacer(length = 8),
-      widget.CPU(
-        format = 'Cpu: {load_percent}%',
-        foreground = _colors[4],
-      ),
+      widget.CPUGraph(),
       widget.Spacer(length = 8),
-      widget.Memory(
-        foreground = _colors[8],
-        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(_terminal + ' -e htop')},
-        format = '{MemUsed: .0f}{mm}',
-        fmt = 'Mem: {} used',
-      ),
+      widget.MemoryGraph(),
+      widget.Spacer(length = 8),
+      widget.SwapGraph(),
     ], 20)
   ),
 ]
