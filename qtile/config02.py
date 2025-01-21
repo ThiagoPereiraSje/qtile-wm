@@ -198,7 +198,10 @@ screens = [
       _separator,
       widget.Volume(
         foreground = _colors[7],
-        fmt = 'Vol: {}',
+        fmt = "Vol: {}",
+        volume_app = "pavucontrol",
+        volume_down_command = "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        volume_up_command = "pactl set-sink-volume @DEFAULT_SINK@ +5%",
       ),
       _separator,
       widget.KeyboardLayout(
