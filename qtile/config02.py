@@ -137,21 +137,26 @@ _separator = widget.TextBox(
   text = '|',
   font = "Ubuntu Mono",
   foreground = _colors[1],
-  padding = 2,
+  padding = 4,
   fontsize = 14
 )
 
 screens = [
   Screen(
     top=bar.Bar([
+      widget.TextBox(
+        text = 'WS:',
+        foreground = _colors[1],
+        padding = 4,
+        fontsize = 14
+      ),
       widget.GroupBox(
         fontsize = 11,
-        fmt = "WS: {}",
         # margin_y = 5,
         # margin_x = 5,
         # padding_y = 0,
         # padding_x = 1,
-        borderwidth = 2,
+        # borderwidth = 2,
         active = _colors[8],
         inactive = _colors[1],
         rounded = False,
