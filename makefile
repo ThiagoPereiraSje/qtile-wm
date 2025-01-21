@@ -11,7 +11,7 @@ install_deps:
 
 install_qtile:
 	sudo apt install -y pipx python3-xcffib python3-cairocffi
-	pipx install qtile
+	pipx install qtile pulsectl-asyncio
 	pipx ensurepath
 	pipx inject qtile qtile-extras
 	pipx inject qtile psutil

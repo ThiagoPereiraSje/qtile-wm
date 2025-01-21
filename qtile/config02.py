@@ -196,12 +196,12 @@ screens = [
         visible_on_warn = False,
       ),
       _separator,
-      widget.Volume(
+      widget.PulseVolume(
         foreground = _colors[7],
         fmt = "Vol: {}",
-        volume_app = "pavucontrol",
-        volume_down_command = "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-        volume_up_command = "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        # volume_app = "pavucontrol",
+        # volume_down_command = "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        # volume_up_command = "pactl set-sink-volume @DEFAULT_SINK@ +5%",
       ),
       _separator,
       widget.KeyboardLayout(
