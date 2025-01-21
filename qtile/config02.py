@@ -6,6 +6,9 @@ from libqtile import bar, layout, widget, hook, qtile
 from libqtile.config import Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
+from qtile_extras import widget
+from qtile_extras.widget.decorations import BorderDecoration
+
 
 @hook.subscribe.startup_once
 def autostart():
@@ -170,11 +173,16 @@ screens = [
         max_chars = 40
       ),
       widget.Spacer(length = 8),
-      widget.CPUGraph(),
-      widget.Spacer(length = 8),
-      widget.MemoryGraph(),
-      widget.Spacer(length = 8),
-      widget.SwapGraph(),
+      widget.CPU(
+        format = '▓ Cpu: {load_percent}%',
+        foreground = _colors[4],
+        decorations=[
+          BorderDecoration(
+            colour = _colors[4],
+            border_width = [0, 0, 2, 0],
+          )
+        ],
+      ),
     ], 20)
   ),
 ]
