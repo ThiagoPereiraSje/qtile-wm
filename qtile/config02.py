@@ -218,7 +218,7 @@ screens = [
       widget.Wallpaper(
         directory = "~/.config/backgrounds/",
         label = "WP",
-        foreground = _colors[2]
+        foreground = _colors[3]
       ),
       widget.Systray(padding = 2),
     ], 20)
