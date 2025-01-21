@@ -10,7 +10,7 @@ install_deps:
 
 install_qtile:
 	sudo apt install -y pipx python3-xcffib python3-cairocffi
-	pipx install qtile
+	pipx install qtile[all]
 	pipx ensurepath
 	echo '[ "(tty)" = "/dev/tty1" ] && exec startx' >> ~/.profile
 
