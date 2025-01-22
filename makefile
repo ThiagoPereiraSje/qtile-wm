@@ -24,10 +24,12 @@ configure:
 
 	mkdir -p ~/.config/qtile
 	mkdir -p ~/.local/share/fonts
+	mkdir -p ~/.config/rofi
 
 	cp -f qtile/config02.py ~/.config/qtile/config.py
 	cp -f qtile/colors.py ~/.config/qtile/colors.py
 	cp -f qtile/autostart.sh ~/.config/qtile/autostart.sh
+	cp -f rofi/config.rasi ~/.config/rofi/config.rasi
 
 	chmod +x ~/.config/qtile/autostart.sh
 
