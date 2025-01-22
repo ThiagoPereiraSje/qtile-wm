@@ -13,7 +13,6 @@ install_qtile:
 	sudo apt install -y pipx python3-xcffib python3-cairocffi
 	pipx install qtile
 	pipx ensurepath
-	pipx inject qtile qtile-extras
 	pipx inject qtile psutil
 	pipx inject qtile pulsectl-asyncio
 	echo '[ "(tty)" = "/dev/tty1" ] && exec startx' >> ~/.profile

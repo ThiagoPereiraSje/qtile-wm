@@ -6,8 +6,6 @@ from libqtile import bar, layout, widget, hook
 from libqtile.config import Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
-from qtile_extras import widget
-
 
 @hook.subscribe.startup_once
 def autostart():
@@ -151,12 +149,13 @@ screens = [
       ),
       widget.GroupBox(
         margin = 0,
-        margin_y = 3,
+        margin_y = 4,
         borderwidth = 2,
         active = _colors[8],
         inactive = _colors[1],
         rounded = False,
         highlight_method = "block",
+        fontsize = 10,
       ),
       _separator,
       widget.WindowName(
