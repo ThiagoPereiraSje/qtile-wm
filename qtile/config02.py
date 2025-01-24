@@ -168,6 +168,8 @@ screens = [
         foreground = _colors[1]
       ),
       widget.Spacer(length = 50),
+      widget.Systray(padding = 2),
+      widget.Spacer(length = 4),
       widget.CPU(
         format = 'Cpu: {load_percent}%',
         foreground = _colors[4],
@@ -219,7 +221,6 @@ screens = [
         label = "WP",
         foreground = _colors[3]
       ),
-      widget.Systray(padding = 2),
     ], 20)
   ),
 ]
