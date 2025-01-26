@@ -4,7 +4,7 @@ install_deps:
 	sudo apt update
 	sudo apt install -y xserver-xorg xinit libpangocairo-1.0-0
 	sudo apt install -y lxterminal pcmanfm bash-completion neovim lxrandr
-	sudo apt install -y compton rofi feh numlockx xscreensaver
+	sudo apt install -y compton rofi feh numlockx xournal
 	sudo apt install -y pulseaudio pulseaudio-utils pavucontrol alarm-clock-applet
 	sudo apt install -y lxappearance materia-gtk-theme yaru-theme-icon
 
