@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Freecad
+GenericName=Design
+Comment=Edit graphics
+Exec=freecad
+Terminal=false
+Type=Application
+Keywords=Graphic;editor;
+Categories=Utility;GraphicEditor;
+StartupNotify=false
