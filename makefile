@@ -36,3 +36,5 @@ configure:
 	cp -f fonts/*.ttf ~/.local/share/fonts/
 	cp -f fonts/*.otf ~/.local/share/fonts/
 	cp -rf backgrounds ~/.config/
+
+	cp -f shortcuts/*.desktop ~/.local/share/applications
