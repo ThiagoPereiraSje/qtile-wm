@@ -6,7 +6,7 @@ install_deps:
 	sudo apt install -y lxterminal pcmanfm bash-completion neovim lxrandr
 	sudo apt install -y compton rofi feh numlockx xournal
 	sudo apt install -y pulseaudio pulseaudio-utils pavucontrol alarm-clock-applet
-	sudo apt install -y lxappearance materia-gtk-theme yaru-theme-icon
+	sudo apt install -y lxappearance lxtask materia-gtk-theme yaru-theme-icon
 
 
 install_qtile:
