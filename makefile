@@ -3,7 +3,7 @@ all: install_deps install_qtile configure
 install_deps:
 	sudo apt update
 	sudo apt install -y xserver-xorg xinit libpangocairo-1.0-0
-	sudo apt install -y pcmanfm bash-completion neovim
+	sudo apt install -y bash-completion neovim
 	sudo apt install -y compton rofi feh numlockx xournal
 	sudo apt install -y lxappearance alarm-clock-applet materia-gtk-theme yaru-theme-icon
 

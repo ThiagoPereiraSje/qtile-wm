@@ -57,7 +57,7 @@ floating_layout = layout.Floating(
 _mod          = "mod4"
 _terminal     = "gnome-terminal"
 _app_launcher = "rofi -show drun -show-icons"
-_file_manager = "pcmanfm"
+_file_manager = "nautilus"
 
 
 # Lazy Functions
