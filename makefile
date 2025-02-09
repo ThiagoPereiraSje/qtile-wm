@@ -21,8 +21,9 @@ configure:
 	sudo cp -f qtile/qtile.desktop /usr/share/xsessions
 
 	mkdir -p ~/.config/qtile
-	mkdir -p ~/.local/share/fonts
 	mkdir -p ~/.config/rofi
+	mkdir -p ~/.local/share/fonts
+	mkdir -p ~/.local/share/applications
 
 	cp -f qtile/config03.py ~/.config/qtile/config.py
 	cp -f qtile/colors.py ~/.config/qtile/colors.py
