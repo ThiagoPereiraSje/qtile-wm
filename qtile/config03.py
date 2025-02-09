@@ -200,6 +200,7 @@ screens = [
       widget.PulseVolume(
         foreground = _colors[7],
         fmt = "Vol: {}",
+        step = 5,
       ),
       _separator,
       widget.KeyboardLayout(
