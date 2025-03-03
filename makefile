@@ -3,7 +3,8 @@ all: install_deps configure
 install_deps:
 	sudo apt update
 	sudo apt install -y bash-completion neovim 
-	sudo apt install -y xournal lxrandr alarm-clock-applet materia-gtk-theme yaru-theme-icon
+	sudo apt install -y xournal bluetooth blueman alarm-clock-applet materia-gtk-theme yaru-theme-icon
+	# sudo apt install lxrandr
 
 
 install_docker:
