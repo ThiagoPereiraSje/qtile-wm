@@ -3,7 +3,7 @@ all: install_deps configure
 install_deps:
 	sudo apt update
 	sudo apt install -y bash-completion neovim 
-	sudo apt install -y xournal bluetooth blueman alarm-clock-applet materia-gtk-theme yaru-theme-icon
+	sudo apt install -y xournal rofi bluetooth blueman alarm-clock-applet materia-gtk-theme yaru-theme-icon
 	# sudo apt install lxrandr
 
 
@@ -37,7 +37,11 @@ configure:
 	mkdir -p ~/.local/bin
 	mkdir -p ~/.local/share/fonts
 	mkdir -p ~/.local/share/applications
+	mkdir -p ~/.config/i3
+	mkdir -p ~/.config/rofi
 
 	cp -f fonts/*.ttf ~/.local/share/fonts/
 	cp -rf backgrounds ~/.config/
 	cp -f shortcuts/*.desktop ~/.local/share/applications
+	cp -f i3/config ~/.config/i3/config
+	cp -f rofi/config.rasi ~/.config/rofi/config.rasi
