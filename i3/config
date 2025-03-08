@@ -59,9 +59,9 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec $terminal
 
 # kill focused window
-bindsym $mod+w kill
+bindsym $mod+Shift+w kill
 bindsym $mod+d exec $app_launcher
-bindsym $mod+f exec $file_manager
+# bindsym $mod+f exec $file_manager
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
