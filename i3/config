@@ -12,7 +12,7 @@
 set $mod Mod4
 set $terminal "mate-terminal"
 set $app_launcher "rofi -show drun -show-icons"
-set $file_manager "caja"
+set $file_manager "pcmanfm"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

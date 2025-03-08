@@ -3,7 +3,7 @@ all: install_deps configure
 install_deps:
 	sudo apt update
 	sudo apt install -y bash-completion neovim 
-	sudo apt install -y xournal rofi picom bluetooth blueman alarm-clock-applet materia-gtk-theme yaru-theme-icon
+	sudo apt install -y xournal rofi picom pcmanfm bluetooth blueman alarm-clock-applet materia-gtk-theme yaru-theme-icon
 	sudo apt remove -y dunst
 	# sudo apt install lxrandr
 
