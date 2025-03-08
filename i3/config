@@ -18,6 +18,7 @@ set $file_manager "caja"
 # is used in the bar {} block below.
 font pango:Ubuntu Bold 10
 new_window pixel 1
+default_floating_border pixel 1
 gaps inner 5
 # gaps outer 0
 
