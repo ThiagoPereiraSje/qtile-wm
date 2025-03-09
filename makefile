@@ -39,10 +39,12 @@ configure:
 	mkdir -p ~/.local/share/fonts
 	mkdir -p ~/.local/share/applications
 	mkdir -p ~/.config/i3
+	mkdir -p ~/.config/i3status
 	mkdir -p ~/.config/rofi
 
 	cp -f fonts/*.ttf ~/.local/share/fonts/
 	cp -rf backgrounds ~/.config/
 	cp -f shortcuts/*.desktop ~/.local/share/applications
-	cp -f i3/config ~/.config/i3/config
+	cp -f i3/config.conf ~/.config/i3/config
+	cp -f i3/i3status.conf ~/.config/i3status/config
 	cp -f rofi/config.rasi ~/.config/rofi/config.rasi
