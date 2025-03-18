@@ -1,6 +1,6 @@
-install: install_deps configure
+install: deps_install env_configure
 
-install_deps:
+deps_install:
 	sudo apt update
 	sudo apt install -y xorg lxde-core lxappearance i3 xinit lightdm lightdm-gtk-greeter\
 		picom lxrandr lxtask pulseaudio pulseaudio-utils pavucontrol bluetooth blueman\
@@ -10,7 +10,7 @@ install_deps:
 	sudo apt autoremove -y
 
 
-configure:
+env_configure:
 	sudo mkdir -p /usr/share/xsessions
 	mkdir -p ~/.config/lxsession/LXDE
 	mkdir -p ~/.config/i3
@@ -32,6 +32,13 @@ configure:
 	cp -f shortcuts/*.desktop ~/.local/share/applications
 
 	sudo systemctl enable lightdm
+
+
+remote_access_configure:
+	sudo systemctl restart xrdp
+	sudo adduser xrdp ssl-cert
+	sudo systemctl restart xrdp
+	sudo systemctl enable xrdp
 
 
 test:
