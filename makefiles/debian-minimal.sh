@@ -4,7 +4,7 @@ deps_install:
 	sudo apt update
 	sudo apt install -y xorg lxde-core lxappearance i3 xinit lightdm lightdm-gtk-greeter\
 		picom lxrandr lxtask pulseaudio pulseaudio-utils pavucontrol bluetooth blueman\
-		lxclipboard rofi bash-completion neovim alarm-clock-applet xrdp yaru-theme-gtk\
+		lxclipboard rofi bash-completion neovim alarm-clock-applet xrdp materia-gtk-theme\
 		yaru-theme-icon yaru-theme-sound
 	sudo apt remove -y openbox openbox-lxde-session
 	sudo apt autoremove -y
