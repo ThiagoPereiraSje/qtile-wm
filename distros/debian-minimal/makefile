@@ -7,6 +7,14 @@ install_deps:
 		rofi bash-completion neovim alarm-clock-applet xrdp yaru-theme-gtk yaru-theme-icon\
 		yaru-theme-sound
 
+
+configure:
+	sudo mkdir -p /usr/share/xsessions
+	sudo cp -f i3/lxde3.desktop /usr/share/xsessions
+
+	sudo systemctl enable lightdm
+
+
 test:
 	@echo "configure debian minimal"
 	@pwd
