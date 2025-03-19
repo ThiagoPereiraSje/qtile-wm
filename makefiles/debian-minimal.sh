@@ -5,7 +5,7 @@ deps_install:
 	sudo apt install -y xorg i3 xinit lightdm lightdm-gtk-greeter\
 		lxappearance lxrandr lxtask lxterminal pcmanfm\
 		pulseaudio pulseaudio-utils pavucontrol bluetooth blueman rofi\
-		bash-completion neovim alarm-clock-applet xrdp picom
+		bash-completion neovim alarm-clock-applet xrdp picom feh htop
 	sudo apt autoremove -y
 
 
@@ -16,6 +16,7 @@ env_configure:
 
 	cp -f i3/config2.conf ~/.config/i3/config
 	cp -f i3/i3status.conf ~/.config/i3status/config
+	cp -f i3/xinitrc.conf ~/.xinitrc
 	cp -f rofi/config.rasi ~/.config/rofi/config.rasi
 
 	mkdir -p ~/.local/bin
