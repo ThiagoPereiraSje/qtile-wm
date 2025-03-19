@@ -5,17 +5,19 @@ deps_install:
 	sudo apt install -y xorg i3 xinit lightdm lightdm-gtk-greeter\
 		lxde-core lxappearance lxrandr lxtask lxterminal pcmanfm\
 		pulseaudio pulseaudio-utils pavucontrol bluetooth blueman rofi\
-		bash-completion neovim alarm-clock-applet xrdp picom feh
+		bash-completion neovim alarm-clock-applet xrdp picom
 	sudo apt remove -y openbox*
 	sudo apt autoremove -y
 
 
 env_configure:
+	sudo mkdir -p /usr/share/xsessions
 	mkdir -p ~/.config/lxsession/LXDE
 	mkdir -p ~/.config/i3
 	mkdir -p ~/.config/i3status
 	mkdir -p ~/.config/rofi
 
+	sudo cp -f i3/lxde.desktop /usr/share/xsessions
 	cp -f i3/lxde.conf ~/.config/lxsession/LXDE/desktop.conf
 	cp -f i3/config2.conf ~/.config/i3/config
 	cp -f i3/i3status.conf ~/.config/i3status/config
