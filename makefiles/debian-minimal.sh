@@ -2,10 +2,10 @@ install: deps_install env_configure
 
 deps_install:
 	sudo apt update
-	sudo apt install -y xorg lxde-core lxappearance i3 xinit lightdm lightdm-gtk-greeter\
-		picom lxrandr lxtask pulseaudio pulseaudio-utils pavucontrol bluetooth blueman\
-		rofi bash-completion neovim alarm-clock-applet xrdp
-	sudo apt remove -y openbox openbox-lxde-session
+	sudo apt install -y xorg i3 xinit lightdm lightdm-gtk-greeter\
+		lxsession lxappearance lxrandr lxtask lxterminal pcmanfm\
+		pulseaudio pulseaudio-utils pavucontrol bluetooth blueman rofi\
+		bash-completion neovim alarm-clock-applet xrdp picom feh
 	sudo apt autoremove -y
 
 
