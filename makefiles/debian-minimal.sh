@@ -6,16 +6,17 @@ deps_install:
 		lxde-core lxappearance lxrandr lxtask lxterminal pcmanfm\
 		pulseaudio pulseaudio-utils pavucontrol bluetooth blueman rofi\
 		bash-completion neovim alarm-clock-applet xrdp picom feh
+	sudo apt remove -y openbox*
 	sudo apt autoremove -y
 
 
 env_configure:
-	mkdir -p ~/.config/lxsession/default
+	mkdir -p ~/.config/lxsession/LXDE
 	mkdir -p ~/.config/i3
 	mkdir -p ~/.config/i3status
 	mkdir -p ~/.config/rofi
 
-	cp -f i3/lxsession.conf ~/.config/lxsession/default/config.conf
+	cp -f i3/lxde.conf ~/.config/lxsession/LXDE/desktop.conf
 	cp -f i3/config2.conf ~/.config/i3/config
 	cp -f i3/i3status.conf ~/.config/i3status/config
 	cp -f rofi/config.rasi ~/.config/rofi/config.rasi
