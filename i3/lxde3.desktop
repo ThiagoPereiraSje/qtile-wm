@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=LXDE3
-Comment=LXDE environment with i3
-Exec=lxsession -s LXDE -e i3
-Type=Application
