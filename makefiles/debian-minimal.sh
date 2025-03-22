@@ -5,7 +5,8 @@ deps_install:
 	sudo apt install -y xorg i3 xinit lightdm lightdm-gtk-greeter\
 		lxappearance lxrandr lxtask lxterminal pcmanfm\
 		pulseaudio pulseaudio-utils pavucontrol bluetooth blueman rofi\
-		bash-completion neovim alarm-clock-applet xrdp picom feh htop
+		bash-completion neovim alarm-clock-applet xrdp picom feh htop\
+		papirus-icon-theme
 	sudo apt autoremove -y
 
 
