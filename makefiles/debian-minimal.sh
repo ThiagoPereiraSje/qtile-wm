@@ -19,6 +19,7 @@ env_configure:
 	cp -f i3/i3status.conf ~/.config/i3status/config
 	cp -f i3/xinitrc.conf ~/.xinitrc
 	cp -f rofi/config.rasi ~/.config/rofi/config.rasi
+	cp -f i3/goals ~/.goals
 
 	mkdir -p ~/.local/bin
 	mkdir -p ~/.local/share/fonts
